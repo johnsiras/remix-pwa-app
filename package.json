@@ -6,9 +6,9 @@
     "build": "npm-run-all -p build:*",
     "dev": "npm-run-all -p dev:*",
     "start": "cross-env NODE_ENV=production netlify dev",
-    "build:remix": "cross-env NODE_ENV=production remix build",
+    "build:remix": "remix build",
     "build:worker": "esbuild ./app/entry.worker.ts --outfile=./public/entry.worker.js --minify --bundle --format=esm --define:process.env.NODE_ENV='\"production\"'",
-    "dev:remix": "cross-env NODE_ENV=development netlify dev",
+    "dev:netlify": "cross-env NODE_ENV=development netlify dev",
     "dev:worker": "esbuild ./app/entry.worker.ts --outfile=./public/entry.worker.js --bundle --format=esm --define:process.env.NODE_ENV='\"development\"' --watch"
   },
   "dependencies": {
